@@ -50,12 +50,20 @@ body {
 .my_single_user_avatar {
     border-radius: 50%;
         width: 60px;
+        height: 60px;
         padding: 0.5rem;
+}
+.my_single_user_details p{
+    color: #7a7a7a;
+}
+
+.active {
+    background-color: rgb(255, 255, 255);
 }
 /* right side */
 .my_chat_area {
     background-image: url(../img/mine.jpg);
-    max-height: 70rem;
+    height: 70rem;
     overflow-y: scroll;
 }
 .my_message {
@@ -71,7 +79,8 @@ body {
 }
 .sent {
     background-color: #fffefe;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 0.8rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2rem;
@@ -81,9 +90,17 @@ body {
 .received {   
     margin-left: auto;
     background-color: #d5f9ba;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 0.8rem;
     margin-top:1rem;
     margin-bottom: 1rem;
     margin-right: 2rem;
     border-radius: 15px;
+}
+
+.my_hour {
+    text-align: end;
+    color: #949494;
+    font-size: small;
+
 }
