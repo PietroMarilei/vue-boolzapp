@@ -66,3 +66,24 @@ body {
     max-height: 61rem;
         overflow-y: auto;
 }
+.my_user_message {
+    width: 50%;
+}
+.sent {
+    background-color: #fffefe;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    border-radius: 15px;
+}
+
+.received {   
+    margin-left: auto;
+    background-color: #d5f9ba;
+    padding: 1.5rem;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+}
