@@ -5,9 +5,34 @@
 }
 
 body {
-    background-color: rgb(168,
-            168,
-            168);
+    background-color: rgb(195, 195, 195);
     font-family: Arial, Helvetica, sans-serif;
 
+}
+
+.main {
+    position: relative;
+    top: -50px;
+}
+
+.header {
+    background-color: rgb(26, 201, 161);
+    height: 100px;
+}
+
+.main {
+    background-color: aliceblue;
+    width: 80%;
+    margin: auto;
+    /* height: 80vh; */
+}
+
+.my_left_header {
+    background-color: rgb(212, 212, 212);
+}
+
+.my_avatar {
+    border-radius: 50%;
+    width: 60px;
+    padding: 0.5rem;
 }
