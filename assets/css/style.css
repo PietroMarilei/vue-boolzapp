@@ -8,6 +8,9 @@ body {
     background-color: rgb(195, 195, 195);
 
 }
+.soft_grey_icons {
+    color: #949494;
+}
 
 .main {
     position: relative;
@@ -23,8 +26,8 @@ body {
     background-color: aliceblue;
     width: 80%;
     margin: auto;
-    /* height: 80vh; */
 }
+
 
 .my_left_header {
     background-color: rgb(212, 212, 212);
@@ -48,4 +51,18 @@ body {
     border-radius: 50%;
         width: 60px;
         padding: 0.5rem;
+}
+/* right side */
+.my_chat_area {
+    background-image: url(../img/mine.jpg);
+    max-height: 70rem;
+    overflow-y: scroll;
+}
+.my_message {
+    height: 3rem;
+    width: 75%;
+}
+.my_users {
+    max-height: 61rem;
+        overflow-y: auto;
 }
