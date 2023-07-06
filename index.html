@@ -19,7 +19,7 @@
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <title>Document</title>
     </head>
-    <body class>
+    <body class="">
         <div id="app">
 
             <div class="my_container">
@@ -28,10 +28,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-4 bg-secondary overflow-y-auto p-0">
-                                <div
-                                    class="my_left_header d-flex justify-content-between">
-                                    <div
-                                        class="my_current_contact d-flex justify-content-between align-items-center flex-wrap">
+                                <!-- left header here -->
+                                <div class="my_left_header d-flex justify-content-between">
+                                    <div class="my_current_contact d-flex justify-content-between align-items-center flex-wrap">
 
                                         <img src="./assets/img/avatar_1.jpg" alt class="my_avatar">
 
@@ -40,13 +39,21 @@
                                         </div>
 
                                     </div>
-                                    <div
-                                        class="my_left_icons d-flex align-items-center px-2">
+                                    <div class="my_left_icons d-flex align-items-center px-2">
                                         <a href="#"><i class="fa-solid fa-circle-notch text-secondary fs-4 px-2 "></i></a>
                                         <a href="#"><i class="fa-solid fa-message text-secondary fs-4 px-2"></i></a>
                                         <a href="#"><i class="fa-solid fa-ellipsis-vertical text-secondary fs-4 px-2"></i></a>
                                     </div>
                                 </div>
+                                <!-- notifies blue area here -->
+                                <div class="my_notifies_area d-flex align-items-center ">
+                                    <i class="fa-solid fa-bell-slash fs-3 m-3"></i>
+                                    <div class="px-1">
+                                        <h5  class="my-0 fw-bold fs-6">Ricevi notifiche di nuovi messaggi</h5>
+                                        <p  class="my-0 ">Attiva notifiche desktop</p>
+                                    </div>
+                                </div>
+                                
 
                                 Lorem ipsum dolor sit amet consectetur,
                                 adipisicing elit. Voluptatem numquam sunt
