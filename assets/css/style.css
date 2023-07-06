@@ -44,3 +44,8 @@ body {
 .my_notifies_area {
     background-color: #8edbfd;
 }
+.my_single_user_avatar {
+    border-radius: 50%;
+        width: 60px;
+        padding: 0.5rem;
+}
