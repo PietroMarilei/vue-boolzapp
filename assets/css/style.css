@@ -33,9 +33,7 @@ body {
     height: calc(100% - 195px);
 }
 
-.col-4 {
-    height: calc(100% - 195px);
-}
+
 .my_left_header {
     background-color: rgb(212, 212, 212);
     height: 65px
