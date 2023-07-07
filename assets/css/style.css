@@ -63,6 +63,9 @@ body {
     height: 80px;
     background-color: #8edbfd;
 }
+.visible {
+    background-color: red;
+}
 .my_single_user {
     cursor: pointer;
 }

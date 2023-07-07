@@ -8,6 +8,7 @@ createApp({
             lastAccess: '10/01/2020 16:15:22',
             userMessage: "",
             remoteAnswear:"Okey!",
+            userSearch: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -207,7 +208,20 @@ createApp({
                         status: 'received'
                     }
                 );
-            }, 1000);
+            }, 1000);           
+        },
+        userFinder() {
+            //qua serve un ciclo, devo cercare in tutti i contacts
+            this.contacts.forEach((singleContact,i) => {
+                console.log(this.userSearch);
+                //console.log(singleContact.name);
+                if (singleContact.name != this.userSearch) {
+                    this.contacts.visibile = false;
+                    console.log('cambiato');
+                } 
+
+            });
+            
             
         }
     },
