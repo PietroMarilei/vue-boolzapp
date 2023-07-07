@@ -4,9 +4,10 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            userMessage: "",
             isActive: 0,
             lastAccess: '10/01/2020 16:15:22',
+            userMessage: "",
+            remoteAnswear:"Okey!",
             contacts: [
                 {
                     name: 'Michele',
@@ -195,6 +196,19 @@ createApp({
             this.userMessage = '';
             console.log(this.contacts[this.isActive].messages);
 
+        },
+        chatBot() {
+            this.newMessage();
+            setTimeout(()=>{
+                this.contacts[this.isActive].messages.push(
+                    {
+                        date: '10/01/2020 16:15:22',
+                        message: this.remoteAnswear,
+                        status: 'received'
+                    }
+                );
+            }, 1000);
+            
         }
     },
 
