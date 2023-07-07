@@ -97,12 +97,10 @@
                                 </div>
                                 <!-- 🟩 chat area here -->
                                 <div  class="my_chat_area p-0 ">
-                                    <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message sent" >
-
+                                    <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message " :class="singleItem.status" >
                                         {{singleItem.message}}
-
                                         <div class="my_hour">
-                                            13.42
+                                           {{singleItem.date.slice(0,11)}}
                                         </div>
                                     </div>
                                 </div>
