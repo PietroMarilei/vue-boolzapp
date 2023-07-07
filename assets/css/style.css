@@ -15,6 +15,7 @@ body {
 .main {
     position: relative;
     top: -50px;
+    height: 80vh;
 }
 
 .header {
@@ -26,25 +27,40 @@ body {
     background-color: aliceblue;
     width: 80%;
     margin: auto;
+    height: calc(100% - 195px);
 }
 
-
+.col-4 {
+    height: calc(100% - 195px);
+}
 .my_left_header {
     background-color: rgb(212, 212, 212);
+    height: 65px
 }
-
+/* 65+80+50 */
 .my_avatar {
     border-radius: 50%;
     width: 60px;
     padding: 0.5rem;
 }
-.fa-bell-slash {
-    background-color:white;
-    color:#8edbfd;
+.my_notifies_area > a {
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    padding: 1rem;
+    padding: 1.9rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
 }
+.fa-bell-slash {  
+    color:#8edbfd; 
+}
+/* contenitore altezza fissa larghezza fissa, e centra verticalmente l'icona */
 .my_notifies_area {
+    height: 80px;
     background-color: #8edbfd;
 }
 .my_single_user_avatar {
@@ -53,10 +69,12 @@ body {
         height: 60px;
         padding: 0.5rem;
 }
+.my_search_area {
+    height: 50px;
+}
 .my_single_user_details p{
     color: #7a7a7a;
 }
-
 .active {
     background-color: rgb(255, 255, 255);
 }
@@ -71,7 +89,7 @@ body {
     width: 75%;
 }
 .my_users {
-    max-height: 61rem;
+    height: calc(100% - 195px);
         overflow-y: auto;
 }
 .my_user_message {
@@ -97,7 +115,7 @@ body {
     margin-right: 2rem;
     border-radius: 15px;
 }
-
+/* container message 100%- le due altezze definite top bottom */
 .my_hour {
     text-align: end;
     color: #949494;

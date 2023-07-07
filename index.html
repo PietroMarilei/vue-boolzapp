@@ -28,7 +28,7 @@
                     <div class="container">
                         <div class="row">
                             <!-- left area here -->
-                            <div class="col-4 overflow-y-auto p-0">
+                            <div class="col-4 p-0 ">
                                 <!-- left header here -->
                                 <div class="my_left_header d-flex justify-content-between">
                                     <div class="my_current_contact d-flex justify-content-between align-items-center flex-wrap">
@@ -48,7 +48,10 @@
                                 </div>
                                 <!-- notifies blue area here -->
                                 <div class="my_notifies_area d-flex align-items-center ">
-                                    <i class="fa-solid fa-bell-slash fs-3 m-3"></i>
+                                    <a class=" fs-4 m-3" href="#">
+                                        <i class="fa-solid fa-bell-slash "></i>
+                                    </a>
+                                    
                                     <div class="px-1">
                                         <h5  class="my-0 fw-bold fs-6">Ricevi notifiche di nuovi messaggi</h5>
                                         <p  class="my-0 ">Attiva notifiche desktop</p>
@@ -56,14 +59,15 @@
                                 </div>
                                 <!-- search area here -->
                                 <div class="my_search_area d-flex justify-content-between align-items-center p-2 soft_grey_icons">
-                                    <i class="fa-solid fa-magnifying-glass fs-4 mx-2 "></i>
+                                    <i class="fa-solid fa-magnifying-glass fs-5 mx-2 "></i>
                                     <input placeholder="Search User" class="w-100 mx-2 border-0 p-2 rounded-2" type="text">
                                 </div>
                                 <!-- my users here -->
-                                <div  class="my_users  overflow-y-auto mx-0">
-                                    <div v-for="(singleUser,i) in contacts" class="my_single_user d-flex p-2 " :class="isActive == i ? 'active': '' ">
+                                <div  class="my_users  mx-0">
+                                    
+                                    <div @click="isActive = i"  v-for="(singleUser,i) in contacts" class="my_single_user d-flex p-2 " :class="isActive == i ? 'active': '' ">
                                         <img class="my_single_user_avatar" :src="singleUser.avatar" alt="userPic">
-                                        <div class="my_single_user_details">
+                                        <div  class="my_single_user_details">
                                             <h5 class="m-0">{{singleUser.name}}</h5>
                                             <p class="m-0 ">{{singleUser.messages[0].message}}</p>
                                         </div>
@@ -101,7 +105,7 @@
                                                     </div>
                                                 </div>
                                         <div class="my_user_message received">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iusto sed quibusdam quam cupiditate voluptate impedit totam suscipit in! Porro, quia. Sit incidunt reprehenderit assumenda maxime? Quis, assumenda? Officiis quidem ducimus velit nostrum laboriosam cupiditate aspernatur nihil, autem nesciunt accusamus natus veritatis sint laudantium dolore? Voluptates adipisci 
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iusto sed quibusdam quam cupiditate voluptate impedit totam suscipit in! Porro, quia. Sit incidunt reprehenderit assumenda maxime? Quis, assumenda? Officiis quidem ducimus velit nostrum laboriosam cupiditate aspernatur nihil, autem nesciunt accusamus natus veritatis sint laudantium dolore? Voluptates adipisci Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis enim beatae magni modi fugiat deleniti at? Commodi dolorem mollitia enim nemo a recusandae blanditiis consequuntur earum quam perspiciatis, quidem dolore nesciunt magni est. Repellendus voluptatum, ullam corrupti di
                                                     <div class="my_hour">
                                                         13.42
                                                     </div>
