@@ -63,8 +63,7 @@
                                     <input placeholder="Search User" class="w-100 mx-2 border-0 p-2 rounded-2" type="text">
                                 </div>
                                 <!-- my users here -->
-                                <div  class="my_users  mx-0">
-                                    
+                                <div  class="my_users  mx-0">                                   
                                     <div @click="isActive = i"  v-for="(singleUser,i) in contacts" class="my_single_user d-flex p-2 " :class="isActive == i ? 'active': '' ">
                                         <img class="my_single_user_avatar" :src="singleUser.avatar" alt="userPic">
                                         <div  class="my_single_user_details">
@@ -98,24 +97,16 @@
                                 </div>
                                 <!-- 🟩 chat area here -->
                                 <div  class="my_chat_area p-0 ">
-                                       <div v-for="(singleUser,i) in contacts[isActive]" class="my_user_message sent">
-                                                    <p >
-                                                        {{singleUser.message}}
-                                                    </p>  
-                                                    <div class="my_hour">
-                                                        13.42
-                                                    </div>
-                                                </div>
-                                        <div class="my_user_message received">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum iusto sed quibusdam quam cupiditate voluptate impedit totam suscipit in! Porro, quia. Sit incidunt reprehenderit assumenda maxime? Quis, assumenda? Officiis quidem ducimus velit nostrum laboriosam cupiditate aspernatur nihil, autem nesciunt accusamus natus veritatis sint laudantium dolore? Voluptates adipisci Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis enim beatae magni modi fugiat deleniti at? Commodi dolorem mollitia enim nemo a recusandae blanditiis consequuntur earum quam perspiciatis, quidem dolore nesciunt magni est. Repellendus voluptatum, ullam corrupti di
-                                                    <div class="my_hour">
-                                                        13.42
-                                                    </div>
-                                                </div>
+                                    <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message sent" >
 
-                                   
-                                   
+                                        {{singleItem.message}}
+
+                                        <div class="my_hour">
+                                            13.42
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="my_message_input_area d-flex justify-content-around align-items-center">
                                     <i class="fa-regular fa-face-smile fs-3 soft_grey_icons"></i>
                                     <input :placeholder="message" class="my_message m-2 rounded-2 border-0 p-3" type="text">
