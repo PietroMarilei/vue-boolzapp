@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             message: "Hello Vue",
+            isActive: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -168,7 +169,7 @@ createApp({
                     ],
                 }
             ],
-            isActive : 0,
+            
         }
 
     },

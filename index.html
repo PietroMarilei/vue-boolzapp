@@ -97,9 +97,11 @@
                                     </div>
                                 </div>
                                 <!-- 🟩 chat area here -->
-                                <div class="my_chat_area p-0 ">
-                                       <div class="my_user_message sent">
-                                                    Lorem ipsum dolor sit amet, consectetur  
+                                <div  class="my_chat_area p-0 ">
+                                       <div v-for="(singleUser,i) in contacts[isActive]" class="my_user_message sent">
+                                                    <p >
+                                                        {{singleUser.message}}
+                                                    </p>  
                                                     <div class="my_hour">
                                                         13.42
                                                     </div>
