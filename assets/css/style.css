@@ -8,6 +8,9 @@ body {
     background-color: rgb(195, 195, 195);
 
 }
+/* .my_container {
+    height:100vh;
+} */
 .soft_grey_icons {
     color: #949494;
 }
@@ -81,7 +84,8 @@ body {
 /* right side */
 .my_chat_area {
     background-image: url(../img/mine.jpg);
-    height: 70rem;
+    height: 89vh;
+    /* chiedere ale */
     overflow-y: scroll;
 }
 .my_message {
