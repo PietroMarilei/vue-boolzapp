@@ -4,8 +4,9 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: "Hello Vue",
+            userMessage: "",
             isActive: 0,
+            lastAccess: '10/01/2020 16:15:22',
             contacts: [
                 {
                     name: 'Michele',
@@ -176,6 +177,24 @@ createApp({
     methods: {
         test() {
             console.log("Hi, im Vue!");
+        },
+        getLastAccess() {
+            //this.lastAccess = this.contacts[this.isActive].messages[messages.legth].date;
+            console.log(this.contacts[this.isActive].messages[messages.length - 1].date);
+            //perchè non va allútlimo el ? 
+        },
+        newMessage() {
+           this.contacts[this.isActive].messages.push(
+               {
+                   date: '10/01/2020 16:15:22',
+                   message: this.userMessage,
+                   status: 'sent'
+               }
+            );
+            console.log(this.userMessage);
+            this.userMessage = '';
+            console.log(this.contacts[this.isActive].messages);
+
         }
     },
 
