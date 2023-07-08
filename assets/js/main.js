@@ -211,15 +211,15 @@ createApp({
             }, 1000);           
         },
         userFinder() {
-            //qua serve un ciclo, devo cercare in tutti i contacts
-            this.contacts.forEach((singleContact,i) => {
-                console.log(this.userSearch);
-                //console.log(singleContact.name);
-                if (singleContact.name != this.userSearch) {
-                    this.contacts.visibile = false;
-                    console.log('cambiato');
-                } 
+            
 
+            this.contacts.forEach((singleContact,i) => {
+                // ⭕❌ da sistemare 
+                if (!singleContact.name.includes(this.userSearch) ) {
+                    this.contacts[i].visible = false;
+                    console.log('cambiato valore visibile');
+                    console.log(this.contacts[i].visible);
+                } 
             });
             
             
@@ -227,6 +227,7 @@ createApp({
     },
 
     mounted() {
+        console.log(this.contacts[2].visible);
     },
 
 

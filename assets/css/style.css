@@ -63,9 +63,7 @@ body {
     height: 80px;
     background-color: #8edbfd;
 }
-.visible {
-    background-color: red;
-}
+
 .my_single_user {
     cursor: pointer;
 }
@@ -78,11 +76,18 @@ body {
 .my_search_area {
     height: 50px;
 }
+/* tutti quelli che non hanno la classe visibile devono essere nascosti */
 .my_single_user_details p{
     color: #7a7a7a;
 }
 .active {
     background-color: rgb(255, 255, 255);
+}
+/* testing right here ⭕❌🔞 */
+/* tutti gli users che non hanno visibleOn devono essere verdi */
+.my_users > :not(.visibleOn) { 
+    color: rgb(57, 227, 57) ;
+    /* display:none; */
 }
 /* right side */
 .my_chat_area {
