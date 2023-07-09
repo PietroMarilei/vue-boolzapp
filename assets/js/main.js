@@ -210,22 +210,17 @@ createApp({
                 );
             }, 1000);           
         },
-        userFinder() {
-            
-
+        userFinder() {          
+            //this starts at ever digit, checks the input to names, if it includes characters in the name it apply the class visibleOn (css: line 88).
             this.contacts.forEach((singleContact,i) => {
-                // ⭕❌ da sistemare 
-                // se l'insieme di caratteri digitali è diverso dal single.contact.name allora setta la prop a false.
-                //
-                if (singleContact.name != this.userSearch) {
-                    
+                if (!singleContact.name.toLowerCase().includes(this.userSearch.toLowerCase())) {                    
                     this.contacts[i].visible = false;
-                    //console.log('cambiato valore visibile');
                     console.log(this.contacts[i].visible);
                     console.log(this.userSearch);
-                } else if (singleContact.name = this.userSearch) {
+
+                } else if (singleContact.name.toLowerCase().includes(this.userSearch.toLowerCase())) {
                     this.contacts[i].visible = true;
-                    console.log("contatto trovato");
+                    console.log("entrato nell'else: contatto trovato");
                 }
             });
             

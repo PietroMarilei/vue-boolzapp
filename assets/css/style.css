@@ -84,10 +84,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 /* testing right here ⭕❌🔞 */
-/* tutti gli users che non hanno visibleOn devono essere verdi */
+/* tutti gli users che non hanno visibleOn devono essere rossi */
 .my_users > :not(.visibleOn) { 
-    color: rgb(57, 227, 57) ;
-    /* display:none; */
+    /* color: rgb(237, 15, 15) ; */
+    display:none !important;
 }
 /* right side */
 .my_chat_area {
