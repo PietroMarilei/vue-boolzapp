@@ -215,11 +215,18 @@ createApp({
 
             this.contacts.forEach((singleContact,i) => {
                 // ⭕❌ da sistemare 
-                if (!singleContact.name.includes(this.userSearch) ) {
+                // se l'insieme di caratteri digitali è diverso dal single.contact.name allora setta la prop a false.
+                //
+                if (singleContact.name != this.userSearch) {
+                    
                     this.contacts[i].visible = false;
-                    console.log('cambiato valore visibile');
+                    //console.log('cambiato valore visibile');
                     console.log(this.contacts[i].visible);
-                } 
+                    console.log(this.userSearch);
+                } else if (singleContact.name = this.userSearch) {
+                    this.contacts[i].visible = true;
+                    console.log("contatto trovato");
+                }
             });
             
             
