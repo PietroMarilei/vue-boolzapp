@@ -7,7 +7,11 @@
 body {
     background-color: rgb(195, 195, 195);
     background: rgb(255, 255, 255);
-        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(0, 229, 160, 1) 85%);
+     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(0, 229, 160, 1) 85%);
+     font-size: 0.8rem !important;
+}
+h5 {
+    font-size: 1rem;
 }
 
 .soft_grey_icons {
@@ -18,9 +22,11 @@ body {
     background-color: aliceblue;
     width: 80%;
     margin: auto;
-    height: calc(100% - 195px);
+    /* height: calc(100% - 195px); */
     margin-top: 2rem;
-        margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    /* 🔴 fixare altezze */
+    /* height: 80vh; */
 }
 
 .my_left_header {
@@ -73,8 +79,7 @@ body {
 .active {
     background-color: rgb(255, 255, 255);
 }
-/* testing right here ⭕❌🔞 */
-/* tutti gli users che non hanno visibleOn devono essere rossi */
+/* tutti gli users che non hanno visibleOn devono essere rossi/nascosti */
 .my_users > :not(.visibleOn) { 
     /* color: rgb(237, 15, 15) ; */
     display:none !important;
