@@ -6,24 +6,12 @@
 
 body {
     background-color: rgb(195, 195, 195);
-
+    background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(0, 229, 160, 1) 85%);
 }
-/* .my_container {
-    height:100vh;
-} */
+
 .soft_grey_icons {
     color: #949494;
-}
-
-.main {
-    position: relative;
-    top: -50px;
-    height: 80vh;
-}
-
-.header {
-    background-color: rgb(26, 201, 161);
-    height: 100px;
 }
 
 .main {
@@ -31,6 +19,8 @@ body {
     width: 80%;
     margin: auto;
     height: calc(100% - 195px);
+    margin-top: 2rem;
+        margin-bottom: 2rem;
 }
 
 .my_left_header {
