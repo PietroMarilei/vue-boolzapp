@@ -210,6 +210,29 @@ createApp({
                 );
             }, 1000);           
         },
+        quotesChatBotTest() {
+            this.newMessage();
+            setTimeout(() => {
+            
+                axios.get('https://type.fit/api/quotes') // Replace with the actual API endpoint
+                    .then(response => {
+                        const quotes = response.data;
+                        const randomIndex = Math.floor(Math.random() * quotes.length);
+                        const randomQuote = quotes[randomIndex].text;
+                        const randomAuthor = quotes[randomIndex].author;
+
+                        this.remoteAnswear = `"${randomQuote}" - ${randomAuthor}`
+                        console.log(this.remoteAnswear);
+                        this.contacts[this.isActive].messages.push({
+                            date: '10/01/2020 16:15:22',
+                            message: this.remoteAnswear,
+                            status: 'received'
+                        });
+                    })
+                    
+            }, 3000);    
+            
+        },
         userFinder() {          
             //this starts at ever digit, checks the input to names, if it includes characters in the name it apply the class visibleOn (css: line 88).
             this.contacts.forEach((singleContact,i) => {
@@ -229,7 +252,7 @@ createApp({
     },
 
     mounted() {
-        console.log(this.contacts[2].visible);
+        
     },
 
 
