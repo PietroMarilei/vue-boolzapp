@@ -177,11 +177,35 @@ createApp({
 
     },
     methods: {
+        getNowDate() {
+            let currentDate = new Date();
+            let day = currentDate.getDate();
+            let month = currentDate.getMonth() + 1; 
+            let year = currentDate.getFullYear();
+
+            let hours = currentDate.getHours();
+            let minutes = currentDate.getMinutes();
+            let seconds = currentDate.getSeconds();
+
+            if (hours < 10) {
+                hours = '0' + hours;
+            }
+            if (minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            if (seconds < 10) {
+                seconds = '0' + seconds;
+            }
+
+            let formattedDate = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+            //returns formatted date
+            return formattedDate
+        },
         
         newMessage() {
            this.contacts[this.isActive].messages.push(
                {
-                   date: '10/01/2020 16:15:22',
+                   date: this.getNowDate(),
                    message: this.userMessage,
                    status: 'sent'
                }
@@ -217,10 +241,11 @@ createApp({
                         this.remoteAnswear = `"${randomQuote}" - ${randomAuthor}`
                         
                         this.contacts[this.isActive].messages.push({
-                            date: '10/01/2020 16:15:22',
+                            date: this.getNowDate(),
                             message: this.remoteAnswear,
                             status: 'received'
                         });
+                        console.log(this.getNowDate());
                     })
                     
             }, 1000);    

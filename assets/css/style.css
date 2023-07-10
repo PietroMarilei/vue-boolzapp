@@ -95,34 +95,36 @@ h5 {
     /* color: rgb(237, 15, 15) ; */
     display:none !important;
 }
-/* 🔴 */
+
 .my_left_container {
     height: 80vh;
 }
-/* right side */
-/* 🔴 */
+/* ⏯⏯ right side */
+
 .my_right_container {
     height: 80vh;
 }
-/* 🔴 */
+
 .my_right_header {
     background-color: aliceblue;
     height: 65px;
 }
-/* 🔴 */
+.my_current_name p {
+    color: #7a7a7a;
+}
+
 .my_chat_area {
     background-image: url(../img/mine.jpg);
     max-height: calc(100% - 145px) ;
     height: 100%;
     overflow-y: auto;
-    /* height: 80vh; */
-    /* chiedere ❌⭕ */
+    
 }
 .my_message {
     height: 3rem;
     width: 75%;
 }
-/* 🔴 */
+
 .my_users {
     height: calc(100% - 195px);
     overflow-y: auto;

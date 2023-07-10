@@ -34,11 +34,11 @@
                                 <div class="my_left_header d-flex justify-content-between">
                                     <div class="my_current_contact d-flex justify-content-between align-items-center flex-wrap">
                                         <!-- user img here -->
-                                        <img :src="contacts[isActive].avatar" alt="contact avatar" class="my_avatar">
+                                        <img src="./assets/img/avatar_4.jpg" alt="contact avatar" class="my_avatar">
                                         
                                         <!-- username here -->
                                         <div class="my_current_name">
-                                            <h5 class="my-0">{{contacts[isActive].name}}</h5>
+                                            <h5 class="my-0">Pietro</h5>
                                         </div>
 
                                     </div>
@@ -97,7 +97,7 @@
                                         <!-- username here -->
                                         <div class="my_current_name">
                                             <h5 class="my-0">{{contacts[isActive].name}}</h5>
-                                            <p>{{lastAccess}}</p>
+                                            <p class="my-0">{{contacts[isActive].messages[contacts[isActive].messages.length -1].date}}</p>
                                         </div>
 
                                     </div>
@@ -125,7 +125,7 @@
 
                                         <div class="my_row d-flex">
                                             <div class="my_msg_data w-100">
-                                                {{singleItem.date.slice(0,11)}}
+                                                {{singleItem.date}}
                                             </div>
                                         </div>
                                         
