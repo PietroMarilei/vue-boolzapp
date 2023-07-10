@@ -112,7 +112,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: './assets/img/avatar_5.jpg',
+                    avatar: './assets/img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -177,13 +177,13 @@ createApp({
 
     },
     methods: {
-        test() {
-            console.log("Hi, im Vue!");
-        },
         getLastAccess() {
             //this.lastAccess = this.contacts[this.isActive].messages[messages.legth].date;
-            console.log(this.contacts[this.isActive].messages[messages.length - 1].date);
-            //perchè non va allútlimo el ? 
+            //console.log(this.contacts[this.isActive].messages[messages.length - 1].date);
+            //perchè non va all'ultimo el ? 
+            
+            //console.log(this.contacts[this.isActive].messages[messages.length - 1]);
+
         },
         newMessage() {
            this.contacts[this.isActive].messages.push(
@@ -214,7 +214,7 @@ createApp({
             this.newMessage();
             setTimeout(() => {
             
-                axios.get('https://type.fit/api/quotes') // Replace with the actual API endpoint
+                axios.get('https://type.fit/api/quotes') 
                     .then(response => {
                         const quotes = response.data;
                         const randomIndex = Math.floor(Math.random() * quotes.length);

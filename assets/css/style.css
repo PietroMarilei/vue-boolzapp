@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(195, 195, 195);
-    background: rgb(255, 255, 255);
-     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(0, 229, 160, 1) 85%);
-     font-size: 0.8rem !important;
+body {    
+     font-size: 1rem !important;
+}
+
+.my_container {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(0, 229, 160, 1) 85%);
+    background-repeat: no-repeat;
+    
 }
 h5 {
     font-size: 1rem;
@@ -18,17 +21,18 @@ h5 {
     color: #949494;
 }
 
+/* 🔴 fixare altezze */
 .main {
     background-color: aliceblue;
+    background-size: cover;
     width: 80%;
     margin: auto;
-    /* height: calc(100% - 195px); */
     margin-top: 2rem;
     margin-bottom: 2rem;
-    /* 🔴 fixare altezze */
+    /* height: calc(100% - 195px); */
     /* height: 80vh; */
 }
-
+/* 🔴 */
 .my_left_header {
     background-color: rgb(212, 212, 212);
     height: 65px
@@ -54,25 +58,32 @@ h5 {
 .fa-bell-slash {  
     color:#8edbfd; 
 }
-/* contenitore altezza fissa larghezza fissa, e centra verticalmente l'icona */
+/* 🔴 */
 .my_notifies_area {
     height: 80px;
     background-color: #8edbfd;
 }
-
+/* 🔴 */
+.my_users {
+    max-height: 45rem;
+    overflow-y: scroll;
+}
 .my_single_user {
     cursor: pointer;
 }
+:hover.my_single_user {
+    background-color: #fdfdfd;
+}
 .my_single_user_avatar {
     border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        padding: 0.5rem;
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
 }
 .my_search_area {
     height: 50px;
 }
-/* tutti quelli che non hanno la classe visibile devono essere nascosti */
+
 .my_single_user_details p{
     color: #7a7a7a;
 }
@@ -84,20 +95,36 @@ h5 {
     /* color: rgb(237, 15, 15) ; */
     display:none !important;
 }
+/* 🔴 */
+.my_left_container {
+    height: 80vh;
+}
 /* right side */
+/* 🔴 */
+.my_right_container {
+    height: 80vh;
+}
+/* 🔴 */
+.my_right_header {
+    height: 65px;
+}
+/* 🔴 */
 .my_chat_area {
     background-image: url(../img/mine.jpg);
-    height: 89vh;
-    /* chiedere ale */
-    overflow-y: scroll;
+    max-height: calc(100% - 145px) ;
+    height: 100%;
+    overflow-y: auto;
+    /* height: 80vh; */
+    /* chiedere ❌⭕ */
 }
 .my_message {
     height: 3rem;
     width: 75%;
 }
+/* 🔴 */
 .my_users {
     height: calc(100% - 195px);
-        overflow-y: auto;
+    overflow-y: auto;
 }
 .my_user_message {
     width: 50%;
@@ -128,4 +155,8 @@ h5 {
     color: #949494;
     font-size: small;
 
+}
+/* 🔴 */
+.my_message_input_area {
+    height: 75px;
 }
