@@ -67,8 +67,9 @@
 
                                 </div>
                                 <!-- my users here -->
-                                <div  class="my_users mx-0">                                   
-                                    <div @click="isActive = i; getLastAccess()"  v-for="(singleUser,i) in contacts" class="my_single_user d-flex p-2 " 
+                                <div  class="my_users mx-0">
+                                                                    
+                                    <div @click="isActive = i; "  v-for="(singleUser,i) in contacts" class="my_single_user d-flex p-2 " 
                                     :class="{
                                               'active': isActive === i,
                                               'visibleOn': singleUser.visible,
@@ -76,8 +77,10 @@
                                         <img class="my_single_user_avatar" :src="singleUser.avatar" alt="userPic">
                                         <div  class="my_single_user_details">
                                             <h5 class="m-0">{{singleUser.name}}</h5>
-                                            <p class="m-0 ">{{singleUser.messages[0].message}}</p>
-                                            <!-- ❌ qua ci va messo l'ultimo elemento -->
+                                            <p v-if="singleUser.messages.length != 0"  
+                                            class="m-0 ">{{singleUser.messages[singleUser.messages.length-1].message}}</p>
+
+                                            <p v-else>Nessun messaggio</p>
                                         </div>
                                     </div>
                                     
@@ -106,13 +109,30 @@
                                 </div>
                                 <!-- 🟩 chat area here -->
                                 <div  class="my_chat_area p-0 ">
-                                    <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message " :class="singleItem.status" >
-                                        {{singleItem.message}}
-                                        <div class="my_hour">
-                                           {{singleItem.date.slice(0,11)}}
+                                    <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message" :class="singleItem.status" >
+                                        <div class="my_row d-flex justify-content-between">
+                                            <div class="my_msg_text">
+                                                {{singleItem.message}}
+                                                
+                                            </div>
+                                            <div @click="" class="my_arrow">
+                                                <i class="fa-solid fa-angle-down"></i>
+                                                <div class="my_dropdown">
+                                                    <p @click="messageDelete(i)" class="m-0">Delete Message</p>
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <div class="my_row d-flex">
+                                            <div class="my_msg_data w-100">
+                                                {{singleItem.date.slice(0,11)}}
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
                                     </div>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo sed temporibus mollitia neque ipsum dolores a necessitatibus, recusandae earum ad dignissimos sapiente vel doloremque distinctio officia eum facilis molestias quisquam consectetur cupiditate aut veritatis eos velit ipsa. Repellat odio eos rerum numquam ratione possimus magnam alias! Fugit ipsa iste dolores. Consequuntur reiciendis quos, mollitia pariatur, nesciunt quaerat veniam facilis numquam rerum quam asperiores explicabo sed magni voluptatibus praesentium nisi dolor neque modi beatae eligendi doloremque ab placeat possimus! Magni quam veritatis harum nobis exercitationem laudantium, dolorum aliquam corrupti nostrum sapiente aspernatur cum eaque tenetur delectus laborum ipsa corporis, dolore nam earum voluptas possimus unde cupiditate. Voluptatibus, quas non id placeat adipisci quisquam enim ut voluptatem ad impedit, nulla in laborum temporibus voluptas sequi doloribus! Reprehenderit laborum recusandae quibusdam quas eos suscipit accusantium nesciunt distinctio, nam repellat nihil facere rerum possimus aspernatur pariatur consectetur eaque voluptate dignissimos, esse sequi? Quidem dicta recusandae sed nihil, excepturi dolorum quisquam. Ipsum numquam adipisci iste perspiciatis sunt. Distinctio repudiandae adipisci, blanditiis veniam laboriosam ipsa, minima exercitationem esse unde cumque maxime dolorem enim nobis pariatur doloremque quaerat laudantium ducimus nesciunt praesentium placeat ex animi eligendi voluptas! Ea, explicabo fuga, tempora nesciunt eaque ipsum numquam enim ut omnis aperiam quasi quae dolorem dolore sapiente sint accusamus? Molestiae nisi vero cumque nemo culpa libero, inventore, mollitia ducimus distinctio pariatur sequi quos temporibus velit repellat ipsum modi perferendis. Libero fugiat perspiciatis, sapiente accusantium optio doloribus eligendi, ad veritatis impedit facere minus reiciendis, odio inventore incidunt dolor vitae voluptatum sed aut distinctio. Temporibus vero sint doloremque dolorum! Placeat atque alias amet eos aliquam illo saepe tenetur nobis, facere modi molestias commodi unde sed quia similique rem voluptates sequi. Velit totam sed minima fugit ab quo sint veritatis sequi molestiae autem corporis rerum, placeat modi amet omnis laudantium! Eligendi alias dolorum sint odio voluptates, explicabo facilis magni molestias porro libero? Laboriosam, dolore quae earum fuga ipsum quisquam eaque odio repellat mollitia libero aspernatur vero eum doloremque nihil excepturi quibusdam, praesentium ipsam dignissimos nobis velit similique obcaecati iure? Asperiores et molestias porro, ex totam doloremque suscipit reiciendis unde cum mollitia sint ullam ea architecto iste voluptatum esse ratione. Reprehenderit suscipit quod doloribus ipsam maxime neque! Commodi, illo! Quis, quod nihil. Neque repudiandae debitis iure quae magni quam minus minima quo labore ipsa suscipit illo facere vitae, aliquid temporibus nisi! Et blanditiis iusto, sint eligendi distinctio tempora id eius accusantium temporibus doloribus laborum dignissimos dolore fugiat, doloremque reprehenderit debitis voluptatibus, voluptas enim aliquid iure tempore repellat praesentium! Praesentium modi veniam dicta maxime omnis dolores voluptate recusandae natus aliquid perspiciatis voluptatum dignissimos sit, assumenda ut eveniet ad est quod voluptas ducimus possimus quae nobis. Ut vitae ipsum dolor molestiae, soluta nam non illum blanditiis quaerat ducimus iusto asperiores exercitationem, porro eveniet corporis temporibus recusandae maiores eaque. Nesciunt perspiciatis sapiente aut similique veritatis autem reprehenderit, animi officiis sit iure molestias nulla minus, libero doloremque maiores ea adipisci architecto nobis ex veniam? Nihil, dolore hic non, quod, corporis ea veritatis ratione possimus officiis incidunt mollitia praesentium!
+                                    
                                 </div>
 
                                 <div class="my_message_input_area d-flex justify-content-around align-items-center">

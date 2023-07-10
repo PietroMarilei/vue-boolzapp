@@ -177,14 +177,7 @@ createApp({
 
     },
     methods: {
-        getLastAccess() {
-            //this.lastAccess = this.contacts[this.isActive].messages[messages.legth].date;
-            //console.log(this.contacts[this.isActive].messages[messages.length - 1].date);
-            //perchè non va all'ultimo el ? 
-            
-            //console.log(this.contacts[this.isActive].messages[messages.length - 1]);
-
-        },
+        
         newMessage() {
            this.contacts[this.isActive].messages.push(
                {
@@ -222,7 +215,7 @@ createApp({
                         const randomAuthor = quotes[randomIndex].author;
 
                         this.remoteAnswear = `"${randomQuote}" - ${randomAuthor}`
-                        console.log(this.remoteAnswear);
+                        
                         this.contacts[this.isActive].messages.push({
                             date: '10/01/2020 16:15:22',
                             message: this.remoteAnswear,
@@ -231,6 +224,17 @@ createApp({
                     })
                     
             }, 1000);    
+            
+        },
+        messageDelete(i) {
+            console.log((this.contacts[this.isActive].messages.length ));
+
+            // if ((this.contacts[this.isActive].messages.length) != 1) {
+            //     this.contacts[this.isActive].messages.splice(i, 1)
+            //     console.log('cancellato');
+            // }
+                this.contacts[this.isActive].messages.splice(i, 1)
+                console.log('cancellato');
             
         },
         userFinder() {          

@@ -23,11 +23,11 @@ h5 {
 
 /* 🔴 fixare altezze */
 .main {
-    background-color: aliceblue;
+    
     background-size: cover;
     width: 80%;
     margin: auto;
-    margin-top: 2rem;
+    padding-top: 2rem;
     margin-bottom: 2rem;
     /* height: calc(100% - 195px); */
     /* height: 80vh; */
@@ -106,6 +106,7 @@ h5 {
 }
 /* 🔴 */
 .my_right_header {
+    background-color: aliceblue;
     height: 65px;
 }
 /* 🔴 */
@@ -128,6 +129,7 @@ h5 {
 }
 .my_user_message {
     width: 50%;
+    
 }
 .sent {
     background-color: #fffefe;
@@ -149,14 +151,36 @@ h5 {
     margin-right: 2rem;
     border-radius: 15px;
 }
-/* container message 100%- le due altezze definite top bottom */
-.my_hour {
+
+.my_message_input_area {
+    height: 75px;
+}
+.my_msg_data {
     text-align: end;
     color: #949494;
     font-size: small;
-
 }
-/* 🔴 */
-.my_message_input_area {
-    height: 75px;
+.my_arrow {
+   position: relative;
+}
+.my_arrow:hover i{
+    transform: rotate(90deg);
+}
+.my_dropdown {
+    
+    background-color: white;  
+    padding: 0.8rem;
+    cursor: pointer;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    width: 150px;
+    -webkit-box-shadow: 0px 6px 4px -1px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 6px 4px -1px rgba(0, 0, 0, 0.41);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;  
+}
+.my_arrow:hover .my_dropdown {
+    display: block;
 }
