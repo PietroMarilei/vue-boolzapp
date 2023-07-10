@@ -111,11 +111,10 @@
                                 <div  class="my_chat_area p-0 ">
                                     <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message" :class="singleItem.status" >
                                         <div class="my_row d-flex justify-content-between">
-                                            <div class="my_msg_text">
+                                            <div @click="displayClassAdder()" class="my_msg_text">
                                                 {{singleItem.message}}
-                                                
                                             </div>
-                                            <div @click="" class="my_arrow">
+                                            <div  class="my_arrow">
                                                 <i class="fa-solid fa-angle-down"></i>
                                                 <div class="my_dropdown">
                                                     <p @click="messageDelete(i)" class="m-0">Delete Message</p>

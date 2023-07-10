@@ -253,15 +253,11 @@ createApp({
         },
         messageDelete(i) {
             console.log((this.contacts[this.isActive].messages.length ));
-
-            // if ((this.contacts[this.isActive].messages.length) != 1) {
-            //     this.contacts[this.isActive].messages.splice(i, 1)
-            //     console.log('cancellato');
-            // }
                 this.contacts[this.isActive].messages.splice(i, 1)
                 console.log('cancellato');
             
         },
+
         userFinder() {          
             //this starts at ever digit, checks the input to names, if it includes characters in the name it apply the class visibleOn (css: line 88).
             this.contacts.forEach((singleContact,i) => {
@@ -277,6 +273,10 @@ createApp({
             });
             
             
+        },
+
+        displayClassAdder(event) {
+            console.log(event);
         }
     },
 
