@@ -275,9 +275,8 @@ createApp({
             
         },
 
-        displayClassAdder(event) {
-            console.log(event);
-        }
+        
+        
     },
 
     mounted() {

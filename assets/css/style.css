@@ -114,9 +114,9 @@ h5 {
 }
 
 .my_chat_area {
+    
     background-image: url(../img/mine.jpg);
-    max-height: calc(100% - 145px) ;
-    height: 100%;
+    height: calc(80vh - 140px);;
     overflow-y: auto;
     
 }
@@ -155,6 +155,7 @@ h5 {
 }
 
 .my_message_input_area {
+    background-color: aliceblue;
     height: 75px;
 }
 .my_msg_data {
