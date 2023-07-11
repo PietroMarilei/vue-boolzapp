@@ -292,12 +292,6 @@ createApp({
         setTimeout(() => {
             this.darkMode = !this.darkMode
             console.log('try dark mode');
-
-            this.contacts[this.isActive].messages.push({
-                date: this.getNowDate(),
-                message: 'Hey, prova la dark mode!',
-                status: 'received'
-            });
         }, 2000); 
 
         setTimeout(() => {
@@ -305,7 +299,14 @@ createApp({
             
         }, 6000); 
 
-        
+        setTimeout(() => {
+            this.darkMode = !this.darkMode
+            this.contacts[this.isActive].messages.push({
+                date: this.getNowDate(),
+                message: 'Hey, prova la dark mode! 🌗',
+                status: 'received'
+            });
+        }, 9000); 
     },
 
 
