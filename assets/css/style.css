@@ -1,3 +1,17 @@
+:root {
+    --bz-background-light: #efefef;
+    --bz-background-dark: #3e9287;
+    --bz-header-bg: #eaeaea;
+    --bz-active-chat: #e9ebeb;
+    --bz-header-icons: #b1b1b1;
+    --bz-enable-alert: #9cdaf8;
+    --bz-input-icons: #6c7375;
+    --bz-light: #fff;
+    --bz-sent-mex: #dcf5bf;
+    --bz-notifies-blue: #8edbfd;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,18 +26,17 @@ body {
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 85%, rgba(0, 229, 160, 1) 85%);
     background-repeat: no-repeat;
     
+    
 }
 h5 {
     font-size: 1rem;
 }
 
 .soft_grey_icons {
-    color: #949494;
+    color: var(--bz-input-icons)
 }
 
-/* 🔴 fixare altezze */
-.main {
-    
+.main {   
     background-size: cover;
     width: 80%;
     margin: auto;
@@ -31,48 +44,58 @@ h5 {
     margin-bottom: 2rem;
     /* height: calc(100% - 195px); */
     /* height: 80vh; */
+    max-width: 1000px;
+    height: 100vh;
+    
 }
-/* 🔴 */
+.my_left_container {
+    background-color: var(--bz-background-light);
+}
 .my_left_header {
-    background-color: rgb(212, 212, 212);
+    background-color: var(--bz-header-bg);
     height: 65px
 }
-/* 65+80+50 */
+
 .my_avatar {
     border-radius: 50%;
     width: 60px;
     padding: 0.5rem;
 }
+.my_notifies_area {
+    font-size: 0.8rem;
+    height: 80px;
+    background-color: var(--bz-notifies-blue)
+}
 .my_notifies_area > a {
-    height: 30px;
-    width: 30px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
-    padding: 1.9rem;
+    padding: 1.5rem;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    
+    text-decoration: none;    
+}
+.my_notifies_area h6 {
+    font-size: 0.8rem;
 }
 .fa-bell-slash {  
-    color:#8edbfd; 
+    color:var(--bz-notifies-blue); 
 }
-/* 🔴 */
-.my_notifies_area {
-    height: 80px;
-    background-color: #8edbfd;
-}
-/* 🔴 */
-.my_users {
-    max-height: 45rem;
-    overflow-y: scroll;
-}
+
 .my_single_user {
     cursor: pointer;
+    background-color: var(--bz-background-light);
+    max-height: 100px;
+    overflow-y: hidden;
+}
+.my_single_user_details p {
+    color: #7a7a7a;
+    font-size: 0.8rem;
 }
 :hover.my_single_user {
-    background-color: #fdfdfd;
+    background-color: var(--bz-light);
 }
 .my_single_user_avatar {
     border-radius: 50%;
@@ -81,14 +104,13 @@ h5 {
     padding: 0.5rem;
 }
 .my_search_area {
+    background-color: var(--bz-background-light);
     height: 50px;
 }
 
-.my_single_user_details p{
-    color: #7a7a7a;
-}
+
 .active {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bz-light);
 }
 /* tutti gli users che non hanno visibleOn devono essere rossi/nascosti */
 .my_users > :not(.visibleOn) { 
@@ -106,15 +128,14 @@ h5 {
 }
 
 .my_right_header {
-    background-color: aliceblue;
+    background-color: var(--bz-header-bg);
     height: 65px;
 }
 .my_current_name p {
     color: #7a7a7a;
 }
 
-.my_chat_area {
-    
+.my_chat_area {   
     background-image: url(../img/mine.jpg);
     height: calc(80vh - 140px);;
     overflow-y: auto;
@@ -134,7 +155,7 @@ h5 {
     
 }
 .sent {
-    background-color: #fffefe;
+    background-color:var(--bz-light);
     padding: 1rem;
     padding-bottom: 0.8rem;
     margin-top: 1rem;
@@ -145,7 +166,7 @@ h5 {
 
 .received {   
     margin-left: auto;
-    background-color: #d5f9ba;
+    background-color: var(--bz-sent-mex);
     padding: 1rem;
     padding-bottom: 0.8rem;
     margin-top:1rem;
@@ -155,12 +176,12 @@ h5 {
 }
 
 .my_message_input_area {
-    background-color: aliceblue;
+    background-color:var(--bz-header-bg);
     height: 75px;
 }
 .my_msg_data {
     text-align: end;
-    color: #949494;
+    color: var(--bz-input-icons);
     font-size: small;
 }
 .my_arrow {
@@ -169,16 +190,15 @@ h5 {
 .my_arrow:hover i{
     transform: rotate(90deg);
 }
-.my_dropdown {
-    
-    background-color: white;  
+.my_dropdown {   
+    background-color: var(--bz-light)  ;
+    color: var(--bz-header-icons);
     padding: 0.8rem;
     cursor: pointer;
     border: 1px solid rgb(214, 214, 214);
     border-radius: 5px;
     width: 150px;
-    -webkit-box-shadow: 0px 6px 4px -1px rgba(0, 0, 0, 0.41);
-    box-shadow: 0px 6px 4px -1px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 2px 2px rgba(171, 171, 171, 0.742);
     position: absolute;
     top: 15px;
     right: 15px;
@@ -186,4 +206,26 @@ h5 {
 }
 .my_arrow:hover .my_dropdown {
     display: block;
+}
+
+/* darkmode */
+
+
+.dark {
+    filter: invert(90%);   
+}
+.dark img {
+    filter: invert(100%);
+}
+.dark.my_container {    
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, #e4e4e4 85%, rgb(235, 48, 48) 85%);
+}
+.dark .received {
+    filter: invert(100%);
+    background-color: #60cebf;
+}
+.dark .my_notifies_area {
+    filter: invert(100%);
+    background-color:#5bc4de ;
 }

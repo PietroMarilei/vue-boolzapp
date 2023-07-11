@@ -21,9 +21,9 @@
         <title>Whatsapp?</title>
     </head>
     <body class="">
-        <div id="app">
+        <div id="app"  >
 
-            <div class="my_container">
+            <div class="my_container" :class="darkMode == true ? 'dark' : ''">
                
                 <div class="main">
                     <div class="container">
@@ -43,19 +43,19 @@
 
                                     </div>
                                     <div class="my_left_icons d-flex align-items-center px-2">
-                                        <a href="#"><i class="fa-solid fa-circle-notch  fs-4 px-2 soft_grey_icons"></i></a>
+                                        <a @click="darkMode = !darkMode; console.log(darkMode)" href="#"><i class="fa-solid fa-circle-half-stroke  fs-4 px-2 soft_grey_icons"></i></a>
                                         <a href="#"><i class="fa-solid fa-message  fs-4 px-2 soft_grey_icons"></i></a>
                                         <a href="#"><i class="fa-solid fa-ellipsis-vertical  fs-4 px-2 soft_grey_icons"></i></a>
                                     </div>
                                 </div>
                                 <!-- notifies blue area here -->
                                 <div class="my_notifies_area d-flex align-items-center ">
-                                    <a class=" fs-4 m-3" href="#">
+                                    <a class=" fs-5 m-3" href="#">
                                         <i class="fa-solid fa-bell-slash "></i>
                                     </a>
                                     
                                     <div class="px-1">
-                                        <h5  class="my-0 fw-bold ">Ricevi notifiche di nuovi messaggi</h5>
+                                        <h6  class="my-0 fw-bold">Ricevi notifiche di nuovi messaggi</h6>
                                         <p  class="my-0 ">Attiva notifiche desktop</p>
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@
                                 <div  class="my_chat_area p-0 ">
                                     <div v-for="(singleItem,i) in contacts[isActive].messages"  class="my_user_message" :class="singleItem.status" >
                                         <div class="my_row d-flex justify-content-between">
-                                            <div @click="displayClassAdder()" class="my_msg_text">
+                                            <div @click="displayClassAdder(e)" class="my_msg_text">
                                                 {{singleItem.message}}
                                             </div>
                                             <div class="my_arrow">

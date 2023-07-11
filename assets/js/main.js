@@ -9,6 +9,7 @@ createApp({
             userMessage: "",
             remoteAnswear:"Okey!",
             userSearch: '',
+            darkMode: false,
             contacts: [
                 {
                     name: 'Michele',
@@ -274,7 +275,12 @@ createApp({
             
             
         },
-
+        displayClassAdder(e) {
+            console.log(e.target);
+            //usa una flag se è true v-if
+            //dropdown:show = false
+            //focus out per rispisritanrla quando esci
+        }
         
         
     },
