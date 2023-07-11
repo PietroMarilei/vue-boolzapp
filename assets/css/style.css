@@ -230,3 +230,7 @@ h5 {
     filter: invert(100%);
     background-color:#5bc4de ;
 }
+
+@media screen and (max-width: 765px) {
+    
+}

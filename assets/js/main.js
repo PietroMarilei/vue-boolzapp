@@ -228,6 +228,8 @@ createApp({
                 );
             }, 1000);           
         },
+        
+
         quotesChatBotTest() {
             this.newMessage();
             setTimeout(() => {
@@ -286,6 +288,23 @@ createApp({
     },
 
     mounted() {
+     
+        setTimeout(() => {
+            this.darkMode = !this.darkMode
+            console.log('try dark mode');
+
+            this.contacts[this.isActive].messages.push({
+                date: this.getNowDate(),
+                message: 'Hey, prova la dark mode!',
+                status: 'received'
+            });
+        }, 2000); 
+
+        setTimeout(() => {
+            this.darkMode = !this.darkMode
+            
+        }, 6000); 
+
         
     },
 
