@@ -17,7 +17,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a {
+    text-decoration: none;
+}
 body {    
      font-size: 1rem !important;
 }
@@ -50,6 +52,7 @@ h5 {
 }
 .my_left_container {
     background-color: var(--bz-background-light);
+    max-height: 80vh;
 }
 .my_left_header {
     background-color: var(--bz-header-bg);
@@ -209,8 +212,6 @@ h5 {
 }
 
 /* darkmode */
-
-
 .dark {
     filter: invert(90%);   
 }
