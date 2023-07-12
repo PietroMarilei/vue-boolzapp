@@ -215,11 +215,9 @@ h5 {
 
 /* darkmode */
 .dark {
-    /* transition: 0.3s; */
     filter: invert(90%);   
 }
-.dark img {
-    
+.dark img {   
     filter: invert(100%);
 }
 .dark.my_container { 
